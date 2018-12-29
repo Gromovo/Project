@@ -11,13 +11,15 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+
 namespace GUI_V_2.Core.View
 {
     public partial class Purch : Form
     {
+
         public Purch()
-        {
-            InitializeComponent();
+        {         
+            InitializeComponent();          
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -46,7 +48,6 @@ namespace GUI_V_2.Core.View
 
         }
 
-
         // Get data from json file if it exists
         private List<Product> GetProductsFromJson(string path)
         {
@@ -57,6 +58,12 @@ namespace GUI_V_2.Core.View
             List<Product> productsList = JsonConvert.DeserializeObject<List<Product>>(json);
 
             return productsList;
+        }
+
+
+        public void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+           
         }
     }
 }

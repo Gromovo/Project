@@ -49,12 +49,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,7 +127,7 @@
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.textBox6.Location = new System.Drawing.Point(60, 397);
+            this.textBox6.Location = new System.Drawing.Point(60, 253);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(926, 194);
@@ -174,6 +168,7 @@
             this.comboBox1.Size = new System.Drawing.Size(194, 29);
             this.comboBox1.TabIndex = 59;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
             // 
             // button5
             // 
@@ -185,7 +180,7 @@
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(1024, 573);
+            this.button5.Location = new System.Drawing.Point(672, 537);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(295, 40);
             this.button5.TabIndex = 6;
@@ -214,7 +209,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(978, 553);
+            this.pictureBox1.Location = new System.Drawing.Point(591, 517);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(60, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -241,9 +236,9 @@
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Italic);
+            this.label9.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(56, 369);
+            this.label9.Location = new System.Drawing.Point(56, 225);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(220, 25);
             this.label9.TabIndex = 68;
@@ -263,94 +258,11 @@
             this.comboBox2.Size = new System.Drawing.Size(194, 29);
             this.comboBox2.TabIndex = 69;
             // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.textBox8.Location = new System.Drawing.Point(614, 266);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(173, 29);
-            this.textBox8.TabIndex = 70;
-            // 
-            // label10
-            // 
-            this.label10.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Italic);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(610, 238);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 25);
-            this.label10.TabIndex = 71;
-            this.label10.Text = "Номер карты";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12"});
-            this.comboBox3.Location = new System.Drawing.Point(614, 330);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(42, 29);
-            this.comboBox3.TabIndex = 72;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Malgun Gothic", 12F);
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "2019",
-            "2020",
-            "2021",
-            "2022",
-            "2023",
-            "2024",
-            "2025"});
-            this.comboBox4.Location = new System.Drawing.Point(686, 330);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(63, 29);
-            this.comboBox4.TabIndex = 73;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(610, 302);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 25);
-            this.label11.TabIndex = 74;
-            this.label11.Text = "Месяц";
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("HoloLens MDL2 Assets", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(687, 302);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(62, 25);
-            this.label12.TabIndex = 75;
-            this.label12.Text = "Год";
-            // 
             // Purch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1050, 605);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox7);
@@ -401,11 +313,5 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
     }
 }

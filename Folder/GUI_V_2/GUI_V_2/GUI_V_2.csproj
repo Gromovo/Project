@@ -79,10 +79,10 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Product.cs" />
-    <Compile Include="Purch.cs">
+    <Compile Include="Purchase\Purch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Purch.Designer.cs">
+    <Compile Include="Purchase\Purch.Designer.cs">
       <DependentUpon>Purch.cs</DependentUpon>
     </Compile>
     <Compile Include="InicioResumen.cs">
@@ -99,6 +99,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase\Purch_Card.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\Purch_Card.Designer.cs">
+      <DependentUpon>Purch_Card.cs</DependentUpon>
+    </Compile>
     <Compile Include="service.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,8 +145,11 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Purch.resx">
+    <EmbeddedResource Include="Purchase\Purch.resx">
       <DependentUpon>Purch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\Purch_Card.resx">
+      <DependentUpon>Purch_Card.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="service.resx">
       <DependentUpon>service.cs</DependentUpon>
@@ -207,6 +216,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Service.mdf</DependentUpon>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Мои креативные идеи к каждой форме\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

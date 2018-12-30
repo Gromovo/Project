@@ -34,6 +34,7 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label12
@@ -113,11 +114,22 @@
             this.textBox8.Size = new System.Drawing.Size(173, 29);
             this.textBox8.TabIndex = 76;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Impact", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(53, 378);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(423, 82);
+            this.label1.TabIndex = 82;
+            this.label1.Text = "ДОДЕЛЫВАЮ !";
+            // 
             // Purch_Card
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 499);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.comboBox4);
@@ -140,5 +152,6 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label1;
     }
 }

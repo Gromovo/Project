@@ -57,6 +57,7 @@
             this.должностьTextBox = new System.Windows.Forms.TextBox();
             this.дата_приема_на_работуDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.дополнительная_информацияTextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             _Label = new System.Windows.Forms.Label();
             имяLabel = new System.Windows.Forms.Label();
@@ -321,11 +322,22 @@
             this.дополнительная_информацияTextBox.Size = new System.Drawing.Size(200, 24);
             this.дополнительная_информацияTextBox.TabIndex = 24;
             // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Impact", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(88, 13);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(423, 82);
+            this.label10.TabIndex = 71;
+            this.label10.Text = "ДОДЕЛЫВАЮ !";
+            // 
             // serviceinvite
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 581);
+            this.Controls.Add(this.label10);
             this.Controls.Add(idLabel);
             this.Controls.Add(this.idTextBox);
             this.Controls.Add(_Label);
@@ -379,5 +391,6 @@
         private System.Windows.Forms.TextBox должностьTextBox;
         private System.Windows.Forms.DateTimePicker дата_приема_на_работуDateTimePicker;
         private System.Windows.Forms.TextBox дополнительная_информацияTextBox;
+        private System.Windows.Forms.Label label10;
     }
 }

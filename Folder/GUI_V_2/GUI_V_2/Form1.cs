@@ -130,5 +130,11 @@ namespace GUI_V_2.Core.View
         {
             AbrirFormInPanel(new Purch());
         }
+
+        private void Settings_pctr_Click(object sender, EventArgs e)
+        {
+            Form settings = new Settings();
+            settings.Show();
+        }
     }
 }

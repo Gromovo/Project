@@ -27,10 +27,7 @@ namespace GUI_V_2.Core.View
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+   
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -61,9 +58,6 @@ namespace GUI_V_2.Core.View
         }
 
 
-        public void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-           
-        }
+      
     }
 }

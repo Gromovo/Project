@@ -209,6 +209,7 @@
     <None Include="Resources\plus-symbaol.png" />
     <None Include="Resources\refresh.png" />
     <None Include="Resources\cross.png" />
+    <None Include="Resources\settings1.png" />
     <Content Include="Service.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

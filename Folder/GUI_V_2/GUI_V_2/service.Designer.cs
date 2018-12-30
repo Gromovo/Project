@@ -99,7 +99,6 @@
             this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refresh.ForeColor = System.Drawing.Color.White;
-            this.refresh.Image = global::GUI_V_2.Core.View.Properties.Resources.refresh;
             this.refresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.refresh.Location = new System.Drawing.Point(493, 3);
             this.refresh.Name = "refresh";
@@ -116,7 +115,6 @@
             this.remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.remove.ForeColor = System.Drawing.Color.White;
-            this.remove.Image = global::GUI_V_2.Core.View.Properties.Resources.cross;
             this.remove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.remove.Location = new System.Drawing.Point(953, 3);
             this.remove.Name = "remove";
@@ -133,7 +131,6 @@
             this.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add.ForeColor = System.Drawing.Color.White;
-            this.add.Image = global::GUI_V_2.Core.View.Properties.Resources.plus_symbaol;
             this.add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.add.Location = new System.Drawing.Point(39, 3);
             this.add.Name = "add";
@@ -245,7 +242,6 @@
             // 
             this.iconminimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconminimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconminimizar.Image = global::GUI_V_2.Core.View.Properties.Resources.minimize;
             this.iconminimizar.Location = new System.Drawing.Point(1173, 5);
             this.iconminimizar.Name = "iconminimizar";
             this.iconminimizar.Size = new System.Drawing.Size(18, 18);
@@ -258,7 +254,6 @@
             // 
             this.iconcerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.iconcerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconcerrar.Image = global::GUI_V_2.Core.View.Properties.Resources.cancel;
             this.iconcerrar.Location = new System.Drawing.Point(1213, 5);
             this.iconcerrar.Name = "iconcerrar";
             this.iconcerrar.Size = new System.Drawing.Size(18, 18);

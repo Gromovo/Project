@@ -136,5 +136,7 @@ namespace GUI_V_2.Core.View
             Form settings = new Settings();
             settings.Show();
         }
+
+
     }
 }

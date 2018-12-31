@@ -1,27 +1,37 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Forms;
-using GUI_V_2.Core.View.Core.Model;
+using GUI_V_2.Core.Interfaces;
 
 namespace GUI_V_2.Core.View.Core.Interfaces
 {
-    public interface IProductsController
+    public interface IProductController
     {
-        // Insert data from list into grid view
-        void UpdateGrid(DataGridView grid, List<ProductModel> products);
+        /// <summary>
+        /// Clear given DataGridView from data
+        /// </summary>
+        /// <param name="gridView">DataGridView for clean</param>
+        void ClearGrid(DataGridView gridView);
 
-        // Show loading message while do something durable
-        void ShowLoadingMessage();
+        /// <summary>
+        /// Saving data from DataGridView to local storage
+        /// </summary>
+        /// <param name="products">List of IProductModel for saving data from it into local storage</param>
+        /// <param name="path">Path to place for saving</param>
+        /// <returns>If saving was successfully then returns true else returns false</returns>
+        bool SaveToStorage(List<IProductModel> products, string path);
 
-        // Clear all rows from DataGridView
-        void ClearGrid(DataGridView grid);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="products">List of IProductModel for saving data from it into datebase</param>
+        /// <returns>If saving was successfully then returns true else returns false</returns>
+        bool SaveToDatabase(List<IProductModel> products);
 
-        // Save data from list of products into database
-        void SaveProductsToDatabase(List<ProductModel> products);
-
-        // Load data of products from database into grid view
-        void LoadProductsToGrid(DataGridView grid);
-
-        // Add product to grid view
-        void AddProduct(TextBox name, TextBox category, TextBox barcode, DataGridView grid);
+        /// <summary>
+        /// Load products from list of IProductModel into DataGridView
+        /// </summary>
+        /// <param name="products">List of IProductModel for loading it into DataGridView</param>
+        /// <param name="gridView">DataGridView for loading products into it</param>
+        void LoadProductsToGrid(List<IProductModel> products, DataGridView gridView);
     }
 }

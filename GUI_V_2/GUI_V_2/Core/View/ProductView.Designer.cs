@@ -1,6 +1,6 @@
 ﻿namespace GUI_V_2.Core.View
 {
-    partial class ProductsView
+    partial class ProductView
     {
         /// <summary>
         /// Required designer variable.

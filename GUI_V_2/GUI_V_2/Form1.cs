@@ -86,7 +86,7 @@ namespace GUI_V_2.Core.View
 
         private void btnprod_Click(object sender, EventArgs e)
         {
-            AbrirFormInPanel(new ProductsView());
+            AbrirFormInPanel(new ProductView());
         }
 
         private void btnlogoInicio_Click(object sender, EventArgs e)

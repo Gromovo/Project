@@ -8,9 +8,9 @@ using Newtonsoft.Json;
 
 namespace GUI_V_2.Core.View
 {
-    public partial class ProductsView : Form
+    public partial class ProductView : Form
     {
-        public ProductsView()
+        public ProductView()
         {
             InitializeComponent();
 

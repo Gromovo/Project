@@ -1,71 +1,57 @@
-﻿using GUI_V_2.Core.View.Core.Model;
-using GUI_V_2.Core.View.Core.Interfaces;
+﻿using System.Collections.Generic;
+using System.IO;
+using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using System.Collections.Generic;
+using GUI_V_2.Core.Interfaces;
+using GUI_V_2.Core.View.Core.Interfaces;
+using Newtonsoft.Json;
 
 namespace GUI_V_2.Core.View.Core.Controller
 {
-    public class ProductsController : IProductsController
+    public class ProductsController : IProductController
     {
-        public ProductsController(ProductsView view, ProductModel model)
+        public void ClearGrid(DataGridView gridView)
         {
+            gridView.Rows.Clear();
         }
 
-        /// <summary>
-        /// Add product to grid view
-        /// </summary>
-        /// <param name="name">The name of product</param>
-        /// <param name="category">The name of category it's product</param>
-        /// <param name="barcode">The barcode it's product</param>
-        /// <param name="grid">DataGridView for adding product into it</param>
-        public void AddProduct(TextBox name, TextBox category, TextBox barcode, DataGridView grid)
+        public void LoadProductsToGrid(List<IProductModel> products, DataGridView gridView)
         {
-            throw new System.NotImplementedException();
+            ClearGrid(gridView);
+
+            foreach (IProductModel product in products)
+            {
+                gridView.Rows.Add(product.Name, product.Category, product.Barcode);
+            }
         }
 
-        /// <summary>
-        /// Clear all rows from DataGridView
-        /// </summary>
-        /// <param name="grid">DataGridView for cleaning all of rows in it</param>
-        public void ClearGrid(DataGridView grid)
+        public bool SaveToStorage(List<IProductModel> products, string path)
         {
-            grid.Rows.Clear();
+            if (path == null || products == null)
+                return false;
+
+            string json = JsonConvert.SerializeObject(products, Formatting.Indented);
+
+            TextWriter txt = new StreamWriter(path);
+            txt.Write(json);
+            txt.Close();
+
+            return true;
+            
         }
 
-        /// <summary>
-        /// Load data of products from database into grid view
-        /// </summary>
-        /// <param name="grid">DataGridView for inserting data of products into it</param>
-        public void LoadProductsToGrid(DataGridView grid)
+        public bool SaveToDatabase(List<IProductModel> products)
         {
-            throw new System.NotImplementedException();
-        }
+            string json = Regex.Replace(JsonConvert.SerializeObject(products, Formatting.Indented), @"\s+", ""); ;
+            string url = "http://fuckyou.kl.com.ua/secret_api.php?sivakamamka=hi&save_products=";
 
-        /// <summary>
-        /// Save data from list of products into database
-        /// </summary>
-        /// <param name="products">List of products for saving</param>
-        public void SaveProductsToDatabase(List<ProductModel> products)
-        {
-            throw new System.NotImplementedException();
-        }
+            var result = new HttpClient().GetAsync(url).Result;
 
-        /// <summary>
-        /// Show loading message while do something durable
-        /// </summary>
-        public void ShowLoadingMessage()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        /// <summary>
-        /// Insert data from list into grid view
-        /// </summary>
-        /// <param name="grid">DataGridViw for adding products into it</param>
-        /// <param name="products">List of products for adding into DataGridView</param>
-        public void UpdateGrid(DataGridView grid, List<ProductModel> products)
-        {
-            throw new System.NotImplementedException();
+            if (int.Parse(result.StatusCode.ToString()) == 200)
+                return true;
+            else
+                return false;
         }
     }
 }
